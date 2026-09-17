@@ -14,7 +14,7 @@ ICS 不是 Apple 专属格式。本扩展不写入 Apple 私有颜色字段，�
 
 ## 安装 Chrome 扩展
 
-1. 从仓库的 [Releases](../../releases/latest) 下载 `SHOU研究生课表导出-v*.zip` 并解压。
+1. 从仓库的 [Releases](../../releases/latest) 下载 `shou-calendar-exporter-v*.zip` 并解压。
 2. 在 Chrome 地址栏打开 `chrome://extensions`。
 3. 开启右上角“开发者模式”。
 4. 点击“加载已解压的扩展程序”。
@@ -23,7 +23,7 @@ ICS 不是 Apple 专属格式。本扩展不写入 Apple 私有颜色字段，�
 ## 安装油猴脚本
 
 1. 安装 Tampermonkey、Violentmonkey 或其他兼容的用户脚本管理器。
-2. 从 [Releases](../../releases/latest) 下载并打开 `SHOU研究生课表导出.user.js`。
+2. 从 [Releases](../../releases/latest) 下载并打开 `shou-calendar-exporter.user.js`。
 3. 在脚本管理器中确认安装。
 
 油猴版本会在课表页右下角显示“导出课表”按钮。更多说明见 [userscript/README.md](userscript/README.md)。

@@ -2,8 +2,8 @@
 
 首个公开版本，提供两种安装方式：
 
-- `SHOU研究生课表导出-v0.1.1.zip`：Chrome 扩展，解压后通过“加载已解压的扩展程序”安装。
-- `SHOU研究生课表导出.user.js`：Tampermonkey、Violentmonkey 等用户脚本管理器安装。
+- `shou-calendar-exporter-v0.1.1.zip`：Chrome 扩展，解压后通过“加载已解压的扩展程序”安装。
+- `shou-calendar-exporter.user.js`：Tampermonkey、Violentmonkey 等用户脚本管理器安装。
 
 主要能力：
 

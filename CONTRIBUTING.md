@@ -7,7 +7,7 @@
 1. 安装 Node.js 22 或更高版本。
 2. 运行 `npm test` 验证解析和导出逻辑。
 3. 运行 `npm run build` 生成可发布文件。
-4. 在 Chrome 的扩展程序页面加载 `dist` 中压缩包解压后的目录，或在用户脚本管理器中安装 `dist/SHOU研究生课表导出.user.js`。
+4. 在 Chrome 的扩展程序页面加载 `dist` 中压缩包解压后的目录，或在用户脚本管理器中安装 `dist/shou-calendar-exporter.user.js`。
 
 项目没有第三方运行时依赖。请勿提交真实课表、姓名、学号、Cookie、访问令牌或其他个人信息。
 

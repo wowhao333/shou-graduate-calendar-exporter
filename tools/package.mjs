@@ -20,7 +20,7 @@ if (!new RegExp(`^// @version\\s+${packageJson.version.replaceAll(".", "\\.")}$`
 const distDir = join(projectRoot, "dist");
 const temporaryRoot = await mkdtemp(join(tmpdir(), "shou-calendar-exporter-"));
 const extensionDir = join(temporaryRoot, "SHOU研究生课表导出");
-const zipPath = join(distDir, `SHOU研究生课表导出-v${packageJson.version}.zip`);
+const zipPath = join(distDir, `shou-calendar-exporter-v${packageJson.version}.zip`);
 
 await rm(distDir, { recursive: true, force: true });
 await mkdir(distDir, { recursive: true });
@@ -38,8 +38,8 @@ for (const relativePath of [
 }
 
 execFileSync("zip", ["-r", "-q", zipPath, basename(extensionDir)], { cwd: temporaryRoot });
-await cp(userscriptPath, join(distDir, "SHOU研究生课表导出.user.js"));
+await cp(userscriptPath, join(distDir, "shou-calendar-exporter.user.js"));
 await rm(temporaryRoot, { recursive: true, force: true });
 
 console.log(`已生成 ${zipPath}`);
-console.log(`已生成 ${join(distDir, "SHOU研究生课表导出.user.js")}`);
+console.log(`已生成 ${join(distDir, "shou-calendar-exporter.user.js")}`);
