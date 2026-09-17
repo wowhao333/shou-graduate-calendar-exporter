@@ -10,8 +10,6 @@
 - **Google Calendar CSV**：使用 Google Calendar 要求的英文表头，每次上课展开为一行。
 - **标准化 JSON**：保存插件解析后的课程、日期和课节信息，便于备份和二次转换。
 
-ICS 不是 Apple 专属格式。本扩展不写入 Apple 私有颜色字段，以避免其他客户端忽略或错误解析。
-
 ## 安装 Chrome 扩展
 
 1. 从仓库的 [Releases](../../releases/latest) 下载 `shou-calendar-exporter-v*.zip` 并解压。
@@ -85,8 +83,6 @@ npm run build
 - 适配器依赖当前研究生平台页面中的 `#jsTbl_01` 课表和课程明细表；学校升级页面后可能需要更新选择器。
 - 尚未安排时间地点的课程只会显示警告，不会生成虚假日程。
 - Google Calendar 手机 App 不提供完整的文件导入入口，通常需要在电脑网页端导入 ICS/CSV，然后同步到安卓设备。
-- 导入颜色由目标日历决定，插件不会强制指定颜色。
-
 ## 许可证
 
 [MIT](LICENSE)
