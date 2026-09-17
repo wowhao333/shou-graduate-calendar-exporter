@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SHOU研究生课表导出</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <div class="brand-mark" aria-hidden="true">海</div>
+        <div>
+          <h1>SHOU研究生课表导出</h1>
+          <p>Apple · Google · Outlook · Android</p>
+        </div>
+        <span class="privacy-badge">仅本地</span>
+      </header>
+
+      <section class="source-card">
+        <div>
+          <p class="eyebrow">数据来源</p>
+          <strong id="source-title">等待读取课表</strong>
+          <p id="status-text" class="muted">请打开“学生课程表”页面。</p>
+        </div>
+        <div class="source-actions">
+          <button id="read-page" class="button secondary" type="button">重新读取</button>
+          <label class="button ghost" for="json-file">导入 JSON</label>
+          <input id="json-file" type="file" accept="application/json,.json" hidden>
+        </div>
+      </section>
+
+      <section id="preview" class="panel hidden" aria-live="polite">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">导出预览</p>
+            <h2 id="calendar-preview">—</h2>
+          </div>
+          <span id="ready-chip" class="status-chip">待检查</span>
+        </div>
+
+        <div class="stats">
+          <div><strong id="course-count">0</strong><span>门课程</span></div>
+          <div><strong id="block-count">0</strong><span>上课时段</span></div>
+          <div><strong id="session-count">0</strong><span>日历事件</span></div>
+        </div>
+
+        <div id="messages" class="messages"></div>
+
+        <div class="form-grid">
+          <label>
+            <span>日历名称</span>
+            <input id="calendar-name" type="text" autocomplete="off">
+          </label>
+          <label>
+            <span>第一周星期一</span>
+            <input id="week-one" type="date">
+            <small id="week-one-hint">用于把教学周换算成日期</small>
+          </label>
+          <label>
+            <span>校区覆盖</span>
+            <input id="campus" type="text" placeholder="留空使用课表中的校区">
+          </label>
+          <label>
+            <span>地点中删除</span>
+            <input id="remove-location" type="text" value="上海海洋大学" placeholder="多个词用逗号分隔">
+          </label>
+          <label class="wide">
+            <span>导出格式</span>
+            <select id="format">
+              <option value="ics">通用 ICS（推荐）</option>
+              <option value="csv">Google Calendar CSV</option>
+              <option value="json">标准化 JSON 备份</option>
+            </select>
+            <small id="format-hint">兼容 Apple、Google、Outlook 及支持 ICS 的安卓日历</small>
+          </label>
+        </div>
+
+        <div class="checks">
+          <label><input id="include-teacher" type="checkbox" checked> 备注包含教师</label>
+          <label><input id="include-class" type="checkbox" checked> 备注包含班级</label>
+        </div>
+
+        <button id="export" class="button primary" type="button" disabled>
+          <span>下载日历文件</span>
+          <span aria-hidden="true">↓</span>
+        </button>
+      </section>
+
+      <footer>不读取密码，不上传课表，不保存登录信息。</footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

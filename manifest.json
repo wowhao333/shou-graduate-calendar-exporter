@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "SHOU研究生课表导出",
+  "version": "0.1.1",
+  "description": "将上海海洋大学研究生课表导出为通用 ICS、Google Calendar CSV 或 JSON，全程本地处理。",
+  "permissions": ["activeTab", "scripting", "declarativeContent"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "SHOU研究生课表导出",
+    "default_popup": "popup/popup.html",
+    "default_state": "disabled"
+  }
+}
